@@ -7,15 +7,15 @@
 		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
 		<init-param>
 			<name>view-template</name>
-			<value>/html/newsmanage/NewsMng.jsp</value>
+			<value>/view.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
 			<mime-type>text/html</mime-type>
 		</supports>
 		<portlet-info>
-			<title>新闻/通告管理</title>
-			<short-title>新闻/通告管理</short-title>
+			<title>新闻/通告</title>
+			<short-title>新闻/通告</short-title>
 			<keywords>NewsAnnoManage</keywords>
 		</portlet-info>
 		<security-role-ref>
