@@ -85,6 +85,9 @@
     	
     });
 </script>
+<!-- <div class="btn-group lfr-icon-menu current-page-menu">
+<a class="dropdown-toggle direction-down max-display-items-15 btn" title="页码" aria-haspopup="true" role="button"><span class="lfr-icon-menu-text">页码</span><i class="caret"></i> </a>
+</div> -->
 <div id="container"></div>
 
 <div id="test"></div>
