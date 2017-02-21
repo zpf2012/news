@@ -12,6 +12,7 @@
 <%
 	Map<String, String> map = ReadConfigFile.getContent();
 	//System.out.println(readConfigFile.getUrlPrefix());
+	/* 测试协同工作 */
 	
 %>
 <script type="text/javascript">
