@@ -20,7 +20,7 @@
 
 	var head = '<thead class="table-columns"><tr><th><input id="selectAll" type="checkbox"/></th><th class="table-first-header" width="400px">标题</th><th width="200px">摘要</th><th>发布日期</th><th>新闻/通告</th><th>当前状态</th><th>操作</th></tr></thdea>';
 
-	var options = '<a href="'+urlPrefix+'/view?id=##new_id##" id="view">预览</a>&nbsp;&nbsp;<a href="'+urlPrefix+'/edit?id=##new_id##">编辑</a>';
+	var options = '<a href="'+urlPrefix+'/view?id=##new_id##">预览</a>&nbsp;&nbsp;<a href="'+urlPrefix+'/edit?id=##new_id##">编辑</a>';
 	//var options = '<a href="/view/##new_id##">预览</a>&nbsp;&nbsp;<a href="/edit/##new_id##">编辑</a>&nbsp;&nbsp;<a href="/delete/##new_id##">删除</a>';
 	var template = '<tbody class="table-data"><tr><td><input id="new_id_##new_id##" type="checkbox"/></td><td>##title##</td><td>##summary##</td><td>##releaseDate##</td><td>##type##</td><td>##status##</td><td>';
 
@@ -34,13 +34,19 @@
 		getData();
 
 		$("#test").html('<a href="'+urlPrefix+'/eipNews/query">查看数据</a>');
-		$("#view").on('click', function() {
+		/*  $("#view").on('click', function() {
 			$("#customerPage").show();
 			return false;
-		});
+		}); */
 
 		$("#customerPage").hide();
 
+		var getPageChildren =  $("#getPage").children('li');
+		/* $("#getPage").children('li').children('a').on('click', function(){ 
+		});*/
+		page = getPageChildren.children('a').attr("id").substr(5);
+		alert(page);
+		
 	});
 	
 	function getData(){
@@ -127,8 +133,7 @@
 				}
 				
 				$("#currentPage").html(page);
-				var getPageChildren =  $("#getPage").children('li');
-				alert(getPageChildren.children('a').attr("id"));
+				
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown) {
 				$("#container").html(
