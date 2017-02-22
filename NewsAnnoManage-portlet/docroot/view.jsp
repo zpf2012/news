@@ -25,6 +25,10 @@
 <script type="text/javascript" charset="UTF-8" src="<%=request.getContextPath()%>/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" charset="UTF-8" src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/pubNews.css" />
+
+
+
 <ul id="NATab" class="nav nav-tabs">
     <li class="active"> <a href="#pubNews" data-toggle="tab">发布新闻</a></li>
     <li> <a href="#pubAnno" data-toggle="tab">发布通告</a></li>
@@ -55,6 +59,7 @@
             var activeTab = $(e.target).text();
             // 获取前一个激活的标签页的名称
             var previousTab = $(e.relatedTarget).text();
+            
             $(".active-tab span").html(activeTab);
             $(".previous-tab span").html(previousTab);
         });
