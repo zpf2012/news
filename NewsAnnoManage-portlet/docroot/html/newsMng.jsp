@@ -44,7 +44,7 @@
 		var getPageChildren =  $("#getPage").children('li');
 		/* $("#getPage").children('li').children('a').on('click', function(){ 
 		});*/
-		page = getPageChildren.children('a').attr("id");
+		page = getPageChildren.children('a').attr("id").substr(5);
 		alert(page);
 		
 	});
